@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
-import { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import { Modal, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
 
 function ConcluirTarefa(props) {
   const [exibirMobal, setExibirModal] = useState(false);
@@ -14,7 +14,7 @@ function ConcluirTarefa(props) {
 
   function btnConcluirTarefa(event) {
     event.preventDefault();
-    const tarefasDB = localStorage["tarefas"];
+    const tarefasDB = localStorage['tarefas'];
     let tarefas = tarefasDB ? JSON.parse(tarefasDB) : [];
 
     tarefas = tarefas.map((tarefa) => {
@@ -25,26 +25,18 @@ function ConcluirTarefa(props) {
       return tarefa;
     });
 
-    localStorage["tarefas"] = JSON.stringify(tarefas);
+    localStorage['tarefas'] = JSON.stringify(tarefas);
     setExibirModal(false);
-    props.recarregarTarefas(true);
+    props.onConcluirTarefa(tarefas);
   }
 
   return (
-    <span
-      data-testid="span-button"
-      className={props.checked}
-      style={{ marginRight: "5px" }}
-    >
+    <span data-testid="span-button" className={props.checked} style={{ marginRight: '5px' }}>
       <Button className="btn-sm" onClick={modal} data-testid="btn-abrir-modal">
         <FontAwesomeIcon icon={faClipboardCheck} />
       </Button>
 
-      <Modal
-        data-testid="modal"
-        show={exibirMobal}
-        onHide={() => setExibirModal(false)}
-      >
+      <Modal data-testid="modal" show={exibirMobal} onHide={() => setExibirModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Concluir tarefa</Modal.Title>
         </Modal.Header>
@@ -54,11 +46,7 @@ function ConcluirTarefa(props) {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button
-            data-testid="btn-concluir"
-            variant="primary"
-            onClick={btnConcluirTarefa}
-          >
+          <Button data-testid="btn-concluir" variant="primary" onClick={btnConcluirTarefa}>
             Sim
           </Button>
 
@@ -77,7 +65,7 @@ function ConcluirTarefa(props) {
 
 ConcluirTarefa.propTypes = {
   tarefa: PropTypes.object.isRequired,
-  recarregarTarefas: PropTypes.func.isRequired,
+  onConcluirTarefa: PropTypes.func.isRequired,
 };
 
 export default ConcluirTarefa;
