@@ -6,9 +6,9 @@ import ListarTarefas from './parts/Listar/ListarTarefas';
 
 // Routes
 const routes = {
-  '/': () => <ListarTarefas />,
-  '/cadastrar': () => <CadastrarTarefa />,
-  '/atualizar/:id': ({ id }) => <AtualizarTarefa id={id} />,
+  '/gerenciador': () => <ListarTarefas />,
+  '/gerenciador/cadastrar': () => <CadastrarTarefa />,
+  '/gerenciador/atualizar/:id': ({ id }) => <AtualizarTarefa id={id} />,
 };
 
 function Gerenciador() {

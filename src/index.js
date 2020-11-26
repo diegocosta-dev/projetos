@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import Router from './routes';
-import Gerenciador from './Components/GerenciadorDeTarefas/GerenciadorDeTarefas';
+import Router from './routes';
+//import Gerenciador from './Components/GerenciadorDeTarefas/GerenciadorDeTarefas';
 
 ReactDOM.render(
-  <Gerenciador />,
-  //<Router />,
+  //<Gerenciador />,
+  <Router />,
   document.getElementById('root')
 );
 

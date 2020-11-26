@@ -81,7 +81,7 @@ function CadastrarTarefa() {
   const [exibirModal, setexibirModal] = useState(false);
 
   function closeModal() {
-    navigate('/');
+    navigate('/gerenciador');
   }
 
   function cadastrar(event) {
@@ -103,8 +103,8 @@ function CadastrarTarefa() {
   return (
     <div>
       <Jumbotron>
-        <h3 className="text-center" style={{ textTransform: 'uppercase' }}>
-          Cadastrar
+        <h3 className="text-center" style={{ margin: '50px' }}>
+          Cadastrar Tarefa
         </h3>
 
         <Form validated={fromValidado} onSubmit={cadastrar} noValidate>
@@ -137,7 +137,7 @@ function CadastrarTarefa() {
               Cadastrar
             </Button>
 
-            <A href="/" className="btn btn-light" style={{ margin: '10px' }}>
+            <A href="/gerenciador" className="btn btn-light" style={{ margin: '10px' }}>
               Voltar
             </A>
           </Form.Group>

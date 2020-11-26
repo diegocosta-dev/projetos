@@ -56,7 +56,6 @@ function Paginacao(props) {
 
   const obterPaginalcao = () => {
     const numPaginas = Math.ceil(props.totalDeItems / props.itemsPorPagina);
-    //console.log(props.totalDeItems, numPaginas);
     let items = [];
     items.push(gerarPrimeiroItem());
     items.push(gerarItemAnterior());
@@ -72,7 +71,7 @@ function Paginacao(props) {
     return items;
   };
 
-  return <Pagination>{obterPaginalcao()}</Pagination>;
+  return <Pagination style={{ padding: '50px auto' }}>{obterPaginalcao()}</Pagination>;
 }
 
 Paginacao.prototype = {

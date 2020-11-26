@@ -28,12 +28,7 @@ function ExcluirTarefa(props) {
 
   return (
     <span>
-      <Button
-        onClick={abrirModal}
-        variant="danger"
-        className="btn-sm"
-        style={{ marginLeft: '5px' }}
-      >
+      <Button onClick={abrirModal} variant="danger" className="btn-sm">
         <FontAwesomeIcon icon={faTrash} />
       </Button>
 

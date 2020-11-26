@@ -85,7 +85,7 @@ function App() {
         >
           <Row>
             <Col x="3">
-              <Button variant="danger" onClick={acaoLimpar}>
+              <Button className="btn-calc" variant="danger" onClick={acaoLimpar}>
                 C
               </Button>
             </Col>
@@ -102,22 +102,23 @@ function App() {
 
           <Row>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('7')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('7')}>
                 7
               </Button>
             </Col>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('8')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('8')}>
                 8
               </Button>
             </Col>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('9')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('9')}>
                 9
               </Button>
             </Col>
             <Col>
               <Button
+                className="btn-calc"
                 variant="warning"
                 style={{ color: 'white', fontWeight: 'bold' }}
                 onClick={() => definirOperacao(DIV)}
@@ -128,17 +129,17 @@ function App() {
           </Row>
           <Row>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('4')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('4')}>
                 4
               </Button>
             </Col>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('5')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('5')}>
                 5
               </Button>
             </Col>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('6')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('6')}>
                 6
               </Button>
             </Col>
@@ -147,6 +148,7 @@ function App() {
                 variant="warning"
                 style={{ color: 'white', fontWeight: 'bold' }}
                 onClick={() => definirOperacao(MULT)}
+                className="btn-calc"
               >
                 *
               </Button>
@@ -154,22 +156,23 @@ function App() {
           </Row>
           <Row>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('1')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('1')}>
                 1
               </Button>
             </Col>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('2')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('2')}>
                 2
               </Button>
             </Col>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('3')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('3')}>
                 3
               </Button>
             </Col>
             <Col>
               <Button
+                className="btn-calc"
                 variant="warning"
                 style={{ color: 'white', fontWeight: 'bold' }}
                 onClick={() => definirOperacao(SUB)}
@@ -180,22 +183,23 @@ function App() {
           </Row>
           <Row>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('0')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('0')}>
                 0
               </Button>
             </Col>
             <Col>
-              <Button variant="light" onClick={() => adicionarNumeros('.')}>
+              <Button className="btn-calc" variant="light" onClick={() => adicionarNumeros('.')}>
                 .
               </Button>
             </Col>
             <Col>
-              <Button variant="success" onClick={acaoCalcular}>
+              <Button className="btn-calc" variant="success" onClick={acaoCalcular}>
                 =
               </Button>
             </Col>
             <Col>
               <Button
+                className="btn-calc"
                 variant="warning"
                 style={{ color: 'white', fontWeight: 'bold' }}
                 onClick={() => definirOperacao(SOMA)}

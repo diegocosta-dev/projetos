@@ -18,19 +18,22 @@ function ItemLista(props) {
         )}
       </td>
 
-      <td className="text-right">
-        <ConcluirTarefas
-          tarefa={tarefa}
-          onConcluirTarefa={props.onConcluirTarefa}
-          checked={tarefa.concluida ? 'hidden' : null}
-        />
-        <A
-          href={'/atualizar/' + tarefa.id}
-          className={tarefa.concluida ? 'hidden' : 'btn btn-warning btn-sm'}
-        >
-          <FontAwesomeIcon icon={faEdit} />
-        </A>
-        <ExcluirTarefa onDeleteTarefas={props.onDeleteTarefas} tarefa={tarefa} />
+      <td>
+        <div style={{ display: 'flex' }}>
+          <ConcluirTarefas
+            tarefa={tarefa}
+            onConcluirTarefa={props.onConcluirTarefa}
+            checked={tarefa.concluida ? 'hidden' : null}
+          />
+          <A
+            href={'gerenciador/atualizar/' + tarefa.id}
+            className={tarefa.concluida ? 'hidden' : 'btn btn-warning btn-sm'}
+            style={{ marginRight: '5px' }}
+          >
+            <FontAwesomeIcon icon={faEdit} />
+          </A>
+          <ExcluirTarefa onDeleteTarefas={props.onDeleteTarefas} tarefa={tarefa} />
+        </div>
       </td>
     </tr>
   ));
